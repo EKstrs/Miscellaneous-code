@@ -36,8 +36,9 @@ def crack_passwords(hash_config, password_file):
     print("Password not found in the given password file.")
 
 if __name__ == "__main__":
+    #Hash config that was leaked
     hash_config = "$argon2d$v=19$m=65536,t=3,p=20$6KTAclwywY7KSPCfX2aOtg$I57sJq6PB48Nh5PMYagJNZzSSOrOiEoZjduuUHhhqiw"
-    # hash_config = "$argon2id$v=19$m=65536,t=3,p=4$BB85h+bOZF2CdVqdvoQXMg$YfbcQZOJHmIPswtdbxuQKgrXKpmqktC7e3300QP+R6s"
+    #Password file that was leaked
     password_file = input("Enter the path to the password file: ")
 
     crack_passwords(hash_config, password_file)
